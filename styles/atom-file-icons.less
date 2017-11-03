@@ -1,0 +1,747 @@
+.file-icon(@filename) {
+	content: '';
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 1.25em;
+	height: 1.5rem !important;
+	top: 5px !important;
+	margin-right: 8px !important;
+	background-image: url("atom://city-lights-icons/icons/@{filename}.svg") !important;
+}
+
+.file-icon-active(@filename) {
+	content: '';
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 1.25em;
+	height: 1.5rem !important;
+	top: 5px !important;
+	margin-right: 8px !important;
+	background-image: url("atom://city-lights-icons/icons/@{filename}-active.svg") !important;
+}
+
+.icon-file-text:before,
+.title:before {
+	.file-icon(default-icon)
+}
+
+.icon-file-directory:before {
+	.file-icon(folder-icon)
+}
+
+.fuzzy-finder .list-group,
+.tab,
+.tree-view .file {
+	[data-name$=".yml"]:before,
+	[data-name$=".yaml"]:before {
+		.file-icon(yaml-icon);
+	}
+
+	[data-name$=".htm"]:before,
+	[data-name$=".html"]:before {
+		.file-icon(html-icon);
+	}
+
+	[data-name$=".es"]:before,
+	[data-name$=".es6"]:before,
+	[data-name$=".js"]:before {
+		.file-icon(js-icon);
+	}
+
+	[data-name$=".css"]:before {
+		.file-icon(css-icon);
+	}
+
+	[data-name$=".DS_Store"]:before {
+		.file-icon(ds_store-icon);
+	}
+
+	[data-name$=".cs"]:before {
+		.file-icon(csharp-icon);
+	}
+
+	[data-name$=".cpp"]:before {
+		.file-icon(cplusplus-icon);
+	}
+
+	[data-name$=".jsx"]:before {
+		.file-icon(jsx-icon);
+	}
+
+	[data-name$=".clj"]:before,
+	[data-name$=".cljs"]:before {
+		.file-icon(clojure-icon);
+	}
+
+	[data-name$=".vue"]:before {
+		.file-icon(vue-icon);
+	}
+
+	[data-name$=".json"]:before,
+	[data-name$=".json5"]:before {
+		.file-icon(json-icon);
+	}
+
+	[data-name^=".gitattributes"]:before,
+	[data-name^=".gitconfig"]:before,
+	[data-name^=".gitignore"]:before,
+	[data-name^=".gitkeep"]:before,
+	[data-name^=".gitmodules"]:before {
+		.file-icon(gitignore-icon);
+	}
+
+	[data-name$=".php"]:before {
+		.file-icon(php-icon);
+	}
+
+	[data-name$=".py"]:before,
+	[data-name="requirements.txt"]:before {
+		.file-icon(python-icon);
+	}
+
+	[data-name$=".less"]:before {
+		.file-icon(less-icon);
+	}
+
+	[data-name$=".sass"]:before,
+	[data-name$=".scss"]:before {
+		.file-icon(sass-icon);
+	}
+
+	.title.icon-markdown:before,
+	[data-name$=".markdown"]:before,
+	[data-name$=".mdown"]:before,
+	[data-name$=".mkd"]:before,
+	[data-name$=".mkdown"]:before,
+	[data-name*=".md"]:before {
+		.file-icon(markdown-icon);
+	}
+
+	[data-name$=".gif"]:before,
+	[data-name$=".jpg"]:before,
+	[data-name$=".png"]:before {
+		.file-icon(image-icon);
+	}
+
+	[data-name$=".eot"]:before,
+	[data-name$=".ttf"]:before,
+	[data-name$=".woff"]:before,
+	[data-name$=".woff2"]:before {
+		.file-icon(font-icon);
+	}
+
+	[data-name$=".rb"]:before,
+	[data-name$=".ru"]:before,
+	[data-name^="Appraisals"]:before,
+	[data-name^="Berksfile"]:before,
+	[data-name^="Capfile"]:before,
+	[data-name^="Dangerfile"]:before,
+	[data-name^="Deliverfile"]:before,
+	[data-name^="Fastfile"]:before,
+	[data-name^="Guardfile"]:before,
+	[data-name^="Jarfile"]:before,
+	[data-name^="Mavenfile"]:before,
+	[data-name^="Podfile"]:before,
+	[data-name^="Puppetfile"]:before,
+	[data-name^="Rakefile"]:before,
+	[data-name^="Snapfile"]:before {
+		.file-icon(ruby-icon);
+	}
+
+	[data-name^="Gemfile"]:before {
+		.file-icon(gemfile-icon)
+	}
+
+	[data-name$=".hbs"]:before,
+	[data-name$=".handlebars"]:before {
+		.file-icon(handlebars-icon);
+	}
+
+	[data-name$=".styl"]:before {
+		.file-icon(stylus-icon);
+	}
+
+	[data-name$=".zip"]:before {
+		.file-icon(zip-icon);
+	}
+
+	[data-name$=".babelrc"]:before {
+		.file-icon(babel-icon);
+	}
+
+	[data-name$=".ts"]:before {
+		.file-icon(typescript-icon);
+	}
+
+	[data-name$=".cjsx"]:before,
+	[data-name$=".coffee"]:before,
+	[data-name$=".cson"]:before {
+		.file-icon(coffeescript-icon);
+	}
+
+	[data-name^=".dockerignore"]:before,
+	[data-name^="Dockerfile"]:before {
+		.file-icon(docker-icon);
+	}
+
+	[data-name$=".jade"]:before {
+		.file-icon(jade-icon);
+	}
+
+	[data-name$=".java"]:before,
+	[data-name$=".jar"]:before {
+		.file-icon(java-icon);
+	}
+
+	[data-name$=".svg"]:before {
+		.file-icon(svg-icon);
+	}
+
+	[data-name$=".go"]:before {
+		.file-icon(go-icon);
+	}
+
+	[data-name$=".sh"]:before {
+		.file-icon(bash-icon);
+	}
+
+	[data-name$=".nodemonignore"]:before,
+	[data-name$="nodemon.json"]:before {
+		.file-icon(node-icon);
+	}
+
+	[data-name^=".travis"]:before {
+		.file-icon(travis-icon);
+	}
+
+	[data-name="circle.yml"]:before {
+		.file-icon(circleci-icon);
+	}
+
+	[data-name^=".eslintignore"]:before,
+	[data-name^=".eslintrc"]:before {
+		.file-icon(eslint-icon);
+	}
+
+	[data-name=".npmignore"]:before,
+	[data-name=".npmrc"]:before,
+	[data-name="npm-debug.log"]:before,
+	[data-name="package.json"]:before {
+		.file-icon(npm-icon);
+	}
+
+	[data-name="yarn.lock"]:before {
+		.file-icon(yarn-icon);
+	}
+
+	[data-name$=".bowerrc"]:before,
+	[data-name="bower.json"]:before {
+		.file-icon(bower-icon);
+	}
+	// [data-name="composer.json"]:before,
+	// [data-name="composer.lock"]:before {
+	// 	.file-icon(composer-icon);
+	// }
+	[data-name^="Gruntfile"]:before,
+	[data-name^="gruntfile"]:before {
+		.file-icon(grunt-icon);
+	}
+
+	[data-name^="Gulpfile"]:before,
+	[data-name^="gulpfile"]:before {
+		.file-icon(gulp-icon);
+	}
+
+	[data-name$=".pdf"]:before {
+		.file-icon(pdf-icon);
+	}
+
+	[data-name$=".swift"]:before {
+		.file-icon(swift-icon);
+	}
+
+	[data-name="Procfile"]:before {
+		.file-icon(heroku-icon);
+	}
+
+	[data-name$=".scala"]:before {
+		.file-icon(scala-icon);
+	}
+
+	[data-name$=".pug"]:before {
+		.file-icon(pug-icon);
+	}
+
+	[data-name$=".editorconfig"]:before {
+		.file-icon(editorconfig-icon);
+	}
+
+	[data-name$=".bootstrap"]:before,
+	[data-name$=".bootstraprc"]:before {
+		.file-icon(bootstrap-icon);
+	}
+
+	[data-name$=".haml"]:before {
+		.file-icon(haml-icon);
+	}
+
+	[data-name$=".hs"]:before {
+		.file-icon(haskell-icon);
+	}
+
+	[data-name$=".xls"]:before {
+		.file-icon(excel-icon);
+	}
+
+	[data-name$=".psd"]:before {
+		.file-icon(photoshop-icon);
+	}
+
+	[data-name$=".ai"]:before {
+		.file-icon(illustrator-icon);
+	}
+
+	[data-name$=".webm"]:before,
+	[data-name$=".mkv"]:before,
+	[data-name$=".flv"]:before,
+	[data-name$=".vob"]:before,
+	[data-name$=".ogv"]:before,
+	[data-name$=".ogg"]:before,
+	[data-name$=".avi"]:before,
+	[data-name$=".wmv"]:before,
+	[data-name$=".rm"]:before,
+	[data-name$=".asf"]:before,
+	[data-name$=".mpg"]:before,
+	[data-name$=".mpeg"]:before,
+	[data-name$=".mpv"]:before,
+	[data-name$=".m4v"]:before,
+	[data-name$=".mp4"]:before {
+		.file-icon(video-icon);
+	}
+	[data-name$=".3gp"]:before,
+	[data-name$=".aa"]:before,
+	[data-name$=".aac"]:before,
+	[data-name$=".aax"]:before,
+	[data-name$=".act"]:before,
+	[data-name$=".aiff"]:before,
+	[data-name$=".amr"]:before,
+	[data-name$=".ape"]:before,
+	[data-name$=".au"]:before,
+	[data-name$=".awb"]:before,
+	[data-name$=".dct"]:before,
+	[data-name$=".dss"]:before,
+	[data-name$=".dvf"]:before,
+	[data-name$=".flac"]:before,
+	[data-name$=".gsm"]:before,
+	[data-name$=".m4a"]:before,
+	[data-name$=".m4p"]:before,
+	[data-name$=".mmf"]:before,
+	[data-name$=".mpc"]:before,
+	[data-name$=".ogg"]:before,
+	[data-name$=".oga"]:before,
+	[data-name$=".mogg"]:before,
+	[data-name$=".wma"]:before,
+	[data-name$=".wma"]:before,
+	[data-name$=".mp3"]:before {
+		.file-icon(audio-icon);
+	}
+
+	[data-name$="apache.conf"]:before,
+	[data-name$="apache.config"]:before {
+		.file-icon(apache-icon);
+	}
+
+	[data-name$=".sketch"]:before,
+	[data-name$=".cocoascript"]:before {
+		.file-icon(cacaoscipt-icon);
+	}
+
+	/* _________________________________SELECTED_____________________________________*/
+	&.active,
+	&.selected,
+	.selected {
+		.icon-file-text:before,
+		.title:before {
+			.file-icon-active(default-icon)
+		}
+
+		[data-name$=".bootstrap"]:before,
+		[data-name$=".bootstraprc"]:before {
+			.file-icon-active(bootstrap-icon);
+		}
+
+		[data-name$=".psd"]:before {
+			.file-icon-active(photoshop-icon);
+		}
+		[data-name$=".ai"]:before {
+			.file-icon-active(illustrator-icon);
+		}
+		[data-name$=".webm"]:before,
+		[data-name$=".mkv"]:before,
+		[data-name$=".flv"]:before,
+		[data-name$=".vob"]:before,
+		[data-name$=".ogv"]:before,
+		[data-name$=".ogg"]:before,
+		[data-name$=".avi"]:before,
+		[data-name$=".wmv"]:before,
+		[data-name$=".rm"]:before,
+		[data-name$=".asf"]:before,
+		[data-name$=".mpg"]:before,
+		[data-name$=".mpeg"]:before,
+		[data-name$=".mpv"]:before,
+		[data-name$=".m4v"]:before,
+		[data-name$=".mp4"]:before {
+			.file-icon-active(video-icon);
+		}
+		[data-name$=".3gp"]:before,
+		[data-name$=".aa"]:before,
+		[data-name$=".aac"]:before,
+		[data-name$=".aax"]:before,
+		[data-name$=".act"]:before,
+		[data-name$=".aiff"]:before,
+		[data-name$=".amr"]:before,
+		[data-name$=".ape"]:before,
+		[data-name$=".au"]:before,
+		[data-name$=".awb"]:before,
+		[data-name$=".dct"]:before,
+		[data-name$=".dss"]:before,
+		[data-name$=".dvf"]:before,
+		[data-name$=".flac"]:before,
+		[data-name$=".gsm"]:before,
+		[data-name$=".m4a"]:before,
+		[data-name$=".m4p"]:before,
+		[data-name$=".mmf"]:before,
+		[data-name$=".mpc"]:before,
+		[data-name$=".ogg"]:before,
+		[data-name$=".oga"]:before,
+		[data-name$=".mogg"]:before,
+		[data-name$=".wma"]:before,
+		[data-name$=".wma"]:before,
+		[data-name$=".mp3"]:before {
+			.file-icon-active(audio-icon);
+		}
+
+
+
+		[data-name$=".editorconfig"]:before {
+			.file-icon-active(editorconfig-icon);
+		}
+
+		[data-name$=".xls"]:before {
+			.file-icon-active(excel-icon);
+		}
+
+		[data-name$="apache.conf"]:before,
+		[data-name$="apache.config"]:before {
+			.file-icon-active(apache-icon);
+		}
+
+		[data-name$=".pug"]:before {
+			.file-icon-active(pug-icon);
+		}
+
+		[data-name$=".haml"]:before {
+			.file-icon-active(haml-icon);
+		}
+
+		[data-name$=".hs"]:before {
+			.file-icon-active(haskell-icon);
+		}
+
+		[data-name$=".yml"]:before,
+		[data-name$=".yaml"]:before {
+			.file-icon-active(yaml-icon);
+		}
+
+		[data-name$=".scala"]:before {
+			.file-icon-active(scala-icon);
+		}
+
+		[data-name$=".zip"]:before {
+			.file-icon-active(zip-icon);
+		}
+
+		[data-name$=".htm"]:before,
+		[data-name$=".html"]:before {
+			.file-icon-active(html-icon);
+		}
+
+		[data-name$=".es"]:before,
+		[data-name$=".es6"]:before,
+		[data-name$=".js"]:before {
+			.file-icon-active(js-icon);
+		}
+
+		[data-name$=".css"]:before {
+			.file-icon-active(css-icon);
+		}
+
+		[data-name$=".DS_Store"]:before {
+			.file-icon-active(ds_store-icon);
+		}
+
+		[data-name$=".cs"]:before {
+			.file-icon-active(csharp-icon);
+		}
+
+		[data-name$=".cpp"]:before {
+			.file-icon-active(cplusplus-icon);
+		}
+
+		[data-name$=".jsx"]:before {
+			.file-icon-active(jsx-icon);
+		}
+
+		[data-name$=".vue"]:before {
+			.file-icon-active(vue-icon);
+		}
+
+		[data-name$=".json"]:before,
+		[data-name$=".json5"]:before {
+			.file-icon-active(json-icon);
+		}
+
+		[data-name^=".gitattributes"]:before,
+		[data-name^=".gitconfig"]:before,
+		[data-name^=".gitignore"]:before,
+		[data-name^=".gitkeep"]:before,
+		[data-name^=".gitmodules"]:before {
+			.file-icon-active(gitignore-icon);
+		}
+
+		[data-name$=".php"]:before {
+			.file-icon-active(php-icon);
+		}
+
+		[data-name$=".py"]:before,
+		[data-name="requirements.txt"]:before {
+			.file-icon-active(python-icon);
+		}
+
+		[data-name$=".less"]:before {
+			.file-icon-active(less-icon);
+		}
+
+		[data-name$=".sh"]:before {
+			.file-icon-active(bash-icon);
+		}
+
+		[data-name$=".sass"]:before,
+		[data-name$=".scss"]:before {
+			.file-icon-active(sass-icon);
+		}
+
+		[data-name$=".clj "]:before,
+		[data-name$=".cljs"]:before {
+			.file-icon-active(clojure-icon);
+		}
+
+		.title.icon-markdown:before,
+		[data-name$=".markdown"]:before,
+		[data-name$=".mdown"]:before,
+		[data-name$=".mkd"]:before,
+		[data-name$=".mkdown"]:before,
+		[data-name*=".md"]:before {
+			.file-icon-active(markdown-icon);
+		}
+
+		[data-name$=".gif"]:before,
+		[data-name$=".jpg"]:before,
+		[data-name$=".png"]:before {
+			.file-icon-active(image-icon);
+		}
+
+		[data-name$=".eot"]:before,
+		[data-name$=".ttf"]:before,
+		[data-name$=".woff"]:before,
+		[data-name$=".woff2"]:before {
+			.file-icon-active(font-icon);
+		}
+
+		[data-name$=".rb"]:before,
+		[data-name$=".ru"]:before,
+		[data-name^="Appraisals"]:before,
+		[data-name^="Berksfile"]:before,
+		[data-name^="Capfile"]:before,
+		[data-name^="Dangerfile"]:before,
+		[data-name^="Deliverfile"]:before,
+		[data-name^="Fastfile"]:before,
+		[data-name^="Guardfile"]:before,
+		[data-name^="Jarfile"]:before,
+		[data-name^="Mavenfile"]:before,
+		[data-name^="Podfile"]:before,
+		[data-name^="Puppetfile"]:before,
+		[data-name^="Rakefile"]:before,
+		[data-name^="Snapfile"]:before {
+			.file-icon-active(ruby-icon);
+		}
+
+		[data-name^="Gemfile"]:before {
+			.file-icon-active(gemfile-icon)
+		}
+
+		[data-name$=".hbs"]:before,
+		[data-name$=".handlebars"]:before {
+			.file-icon-active(handlebars-icon);
+		}
+
+		[data-name$=".styl"]:before {
+			.file-icon-active(stylus-icon);
+		}
+
+		[data-name$=".babelrc"]:before {
+			.file-icon-active(babel-icon);
+		}
+
+		[data-name$=".ts"]:before {
+			.file-icon-active(typescript-icon);
+		}
+
+		[data-name$=".cjsx"]:before,
+		[data-name$=".coffee"]:before,
+		[data-name$=".cson"]:before {
+			.file-icon-active(coffeescript-icon);
+		}
+
+		[data-name^=".dockerignore"]:before,
+		[data-name^="Dockerfile"]:before {
+			.file-icon-active(docker-icon);
+		}
+
+		[data-name$=".jade"]:before {
+			.file-icon-active(jade-icon);
+		}
+
+		[data-name$=".java"]:before,
+		[data-name$=".jar"]:before {
+			.file-icon-active(java-icon);
+		}
+
+		[data-name$=".svg"]:before {
+			.file-icon-active(svg-icon);
+		}
+
+		[data-name$=".go"]:before {
+			.file-icon-active(go-icon);
+		}
+
+		[data-name$=".nodemonignore"]:before,
+		[data-name$="nodemon.json"]:before {
+			.file-icon-active(node-icon);
+		}
+
+		[data-name^=".travis"]:before {
+			.file-icon-active(travis-icon);
+		}
+
+		[data-name="circle.yml"]:before {
+			.file-icon-active(circleci-icon);
+		}
+
+		[data-name^=".eslintignore"]:before,
+		[data-name^=".eslintrc"]:before {
+			.file-icon-active(eslint-icon);
+		}
+
+		[data-name=".npmignore"]:before,
+		[data-name=".npmrc"]:before,
+		[data-name="npm-debug.log"]:before,
+		[data-name="package.json"]:before {
+			.file-icon-active(npm-icon);
+		}
+
+		[data-name="yarn.lock"]:before {
+			.file-icon-active(yarn-icon);
+		}
+
+		[data-name$=".bowerrc"]:before,
+		[data-name="bower.json"]:before {
+			.file-icon-active(bower-icon);
+		}
+		// [data-name="composer.json"]:before,
+		// [data-name="composer.lock"]:before {
+		// 	.file-icon-active(composer-icon);
+		// }
+		[data-name^="Gruntfile"]:before,
+		[data-name^="gruntfile"]:before {
+			.file-icon-active(grunt-icon);
+		}
+
+		[data-name^="Gulpfile"]:before,
+		[data-name^="gulpfile"]:before {
+			.file-icon-active(gulp-icon);
+		}
+
+		[data-name$=".pdf"]:before {
+			.file-icon-active(pdf-icon);
+		}
+
+		[data-name$=".swift"]:before {
+			.file-icon-active(swift-icon);
+		}
+
+		[data-name="Procfile"]:before {
+			.file-icon-active(heroku-icon);
+		}
+
+		[data-name$=".sketch"]:before,
+		[data-name$=".cocoascript"]:before {
+			.file-icon-active(cacaoscipt-icon);
+		}
+	}
+}
+
+.tree-view {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+
+	.expanded > div > .icon-file-directory:before {
+		.file-icon-active(folder-icon)
+	}
+
+	.expanded {
+		&.directory {
+			[data-name$=".sketchPlugin"]:before,
+			[data-name$=".sketchplugin"]:before {
+				.file-icon-active(sketchplugin-icon)
+			}
+
+			[data-name$=".vscode"]:before {
+				.file-icon-active(vscode-icon);
+			}
+		}
+	}
+
+	.collapsed {
+		&.directory {
+			[data-name="node_modules"]:before {
+				.file-icon(node-icon)
+			}
+
+			[data-name$=".vscode"]:before {
+				.file-icon(vscode-icon);
+			}
+
+			[data-name$=".sketchPlugin"]:before,
+			[data-name$=".sketchplugin"]:before {
+				.file-icon(sketchplugin-icon)
+			}
+
+			[data-name$=".git"]:before {
+				.file-icon(git-icon);
+			}
+
+			[data-name^="Gulpfile"]:before,
+			[data-name^="gulpfile"]:before {
+				.file-icon(gulp-icon);
+			}
+
+			[data-name^="Gruntfile"]:before,
+			[data-name^="gruntfile"]:before {
+				.file-icon(grunt-icon);
+			}
+		}
+	}
+}

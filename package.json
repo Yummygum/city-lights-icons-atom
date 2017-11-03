@@ -1,0 +1,24 @@
+{
+  "name": "city-lights-icons",
+  "description": "The City Lights Icon Package contains over 60 file type icons designed and optimized for use in your Atom sidebar.",
+  "repository": "https://github.com/Yummygum/city-lights-icons-atom",
+  "version": "1.0.0",
+  "author": "Noud Adrichem",
+  "keywords": [
+    "icons",
+    "file-icons",
+    "file-tree",
+    "file tree",
+    "tree view",
+    "tree-view",
+    "city-lights-ui",
+    "city-lights-syntax",
+    "city-lights-icons",
+    "fileicons",
+    "file icons"
+  ],
+  "license": "CC-BY-NC-ND",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
