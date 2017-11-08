@@ -698,14 +698,18 @@
 	padding-right: 0 !important;
 
 	.expanded > div > .icon-file-directory:before {
-		.file-icon-active(folder-icon)
+		.file-icon(folder-icon-open)
 	}
 
 	.expanded {
 		&.directory {
 			[data-name$=".sketchPlugin"]:before,
 			[data-name$=".sketchplugin"]:before {
-				.file-icon-active(sketchplugin-icon)
+				.file-icon(sketchplugin-icon-open)
+			}
+
+			[data-name="node_modules"]:before {
+				.file-icon(node-icon)
 			}
 
 			[data-name$=".vscode"]:before {
